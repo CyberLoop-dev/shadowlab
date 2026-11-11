@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShadowLab</title>
+<meta name="description" content="Design layered CSS box-shadows and copy the code.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="assets/logo.svg" alt="" width="28" height="28"><span>ShadowLab</span></div>
+  <button id="theme" class="icon" type="button" aria-label="Toggle theme"><svg viewBox="0 0 24 24"><path d="M20 14A8 8 0 1 1 10 4a6.5 6.5 0 0 0 10 10z"/></svg></button>
+</header>
+<main>
+  <section class="stage">
+    <div id="canvas" class="canvas" role="img" aria-label="Shadow preview"><div id="box" class="box"></div></div>
+    <pre class="code"><code id="css"></code></pre>
+    <div class="row"><button id="copy" class="primary" type="button">Copy CSS</button></div>
+  </section>
+  <section class="panel" aria-label="Controls">
+    <div class="row2"><label class="clr">Page color <input id="page" type="color" value="#e9edf2"></label><label class="clr">Box color <input id="boxc" type="color" value="#ffffff"></label></div>
+    <div id="layers" class="layers"></div>
+    <button id="add" type="button">Add layer</button>
+    <h3>Presets</h3>
+    <div id="presets" class="chips"></div>
+  </section>
+</main>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
